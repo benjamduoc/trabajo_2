@@ -49,15 +49,10 @@ def agregar_estudiante():
 
     nota1, nota2, nota3 = pedir_notas()
     if nota1 is not None:
-        try:
             promedio = calcular_promedio(nota1, nota2, nota3)
-            if promedio == 0:
-                raise ZeroDivisionError("Promedio no puede ser cero.")
             promedios_estudiantes[nombre] = promedio
             nuevos_estudiantes.append(nombre)
             print(f"Estudiante {nombre} agregado con promedio: {promedio:.2f}")
-        except ZeroDivisionError:
-            print("Error: división por cero al calcular promedio.")
 
 def mostrar_nuevos_estudiantes():
     if len(nuevos_estudiantes) == 0:
