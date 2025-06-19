@@ -52,7 +52,7 @@ def agregar_estudiante():
             promedio = calcular_promedio(nota1, nota2, nota3)
             promedios_estudiantes[nombre] = promedio
             nuevos_estudiantes.append(nombre)
-            print(f"Estudiante {nombre} agregado con promedio: {promedio:.2f}")
+            print(f"Estudiante {nombre} agregado con promedio: {promedio:.1f}")
 
 def mostrar_nuevos_estudiantes():
     if len(nuevos_estudiantes) == 0:
